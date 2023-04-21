@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: deployment
 spec:
-  replicas: 5
+  replicas: 15
   selector:
     matchLabels:
-      project: a3
+      project: a3-updated
   template:
     metadata:
       labels:
-        project: a3
+        project: a3-updated
     spec:
       containers:
-      - name: container
+      - name: container-updated
         image: httpd:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 
